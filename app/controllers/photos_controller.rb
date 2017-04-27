@@ -12,6 +12,10 @@ class PhotosController < ApplicationController
   end
 
   def show
+    id_number = params[:the_id]
+
+    @the_photo = Photo.find(id_number)
+
     render("photos/show.html.erb")
   end
 

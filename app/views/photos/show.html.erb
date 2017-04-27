@@ -1,1 +1,23 @@
-<h1>Hi show</h1>
+<h1>Photo Details</h1>
+
+<p>
+  <%= @the_photo.caption %>
+</p>
+
+<img src="<%= @the_photo.source %>">
+
+<p>
+  <%= time_ago_in_words(@the_photo.created_at) %> ago
+</p>
+
+<a href="/photos" class="btn btn-default">
+  Go back
+</a>
+
+<a href="/photos/<%= @the_photo.id %>/edit" class="btn btn-default">
+  Edit
+</a>
+
+<a href="/delete_photo/<%= @the_photo.id %>" class="btn btn-default">
+  Delete
+</a>
