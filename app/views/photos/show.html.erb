@@ -1,5 +1,5 @@
 <h1> Details </h1>
-<img src = <%= @my_photo.source %>>
+<img src = "<%= @my_photo.source %>">
 <p>
 <%= @my_photo.caption %>
 </p>
@@ -9,4 +9,4 @@
 
 <a href = "/photos"> Back </a>
 <a href = "/photos/<%= @my_photo.id %>/edit"> Edit </a>
-<a href = "/delete_photo/<%= @my_photo.id %>/edit"> Delete </a>
+<a href = "/delete_photo/<%= @my_photo.id %>"> Delete </a>

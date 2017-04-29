@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   get("/update_photo/:id_update", {:controller => "photos", :action => "update_row"})
 
   # delete
-  get("/delete_photo/:id", {:controller => "photos", :action => "destroy_row"})
+  get("/delete_photo/:id_delete", {:controller => "photos", :action => "destroy_row"})
 
 end
