@@ -12,7 +12,7 @@ class PhotosController < ApplicationController
     new_photo.caption = cap
     new_photo.save
     # render("photos/create_row.html.erb")
-    redirect_to("/photos/#{new_photo.id}")
+    redirect_to("/photos")
   end
 
   def index
@@ -46,7 +46,7 @@ class PhotosController < ApplicationController
     id_delete = params[:id_delete]
     del_photo = Photo.find(id_delete)
     del_photo.destroy
-    redirect_to("/photos/")
+    redirect_to("/photos")
     # render("photos/destroy_row.html.erb")
   end
 
