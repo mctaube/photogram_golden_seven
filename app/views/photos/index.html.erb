@@ -1,6 +1,9 @@
 <h1> All Photos </h1>
+<p>
+<a href = "/photos/new"> Add New Photo </a>
+</p>
 
-<% @list_of_all_my_photos.each do |the_photo| %>
+<% @list_of_all_my_photos.reverse_each do |the_photo| %>
 
 <img src ="<%= the_photo.source %>">
 <p>
@@ -8,9 +11,9 @@
 </p>
 
 <div>
-<a href = "/photos/<%= the_photo.id %>"> Show </a>
-<a href = "/photos/<%= the_photo.id %>/edit"> Edit </a>
-<a href = "/delete_photo/<%= the_photo.id %>"> Delete </a>
+<a class="btn btn-default btn-lg active" href = "/photos/<%= the_photo.id %>"> Show </a>
+<a class="btn btn-default btn-lg active" href = "/photos/<%= the_photo.id %>/edit"> Edit </a>
+<a class="btn btn-default btn-lg active" href = "/delete_photo/<%= the_photo.id %>"> Delete </a>
 </div>
 
 <% end %>

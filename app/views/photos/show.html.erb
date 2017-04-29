@@ -7,6 +7,6 @@
 <%= time_ago_in_words(@my_photo.created_at) %>
 </p>
 
-<a href = "/photos"> Back </a>
-<a href = "/photos/<%= @my_photo.id %>/edit"> Edit </a>
-<a href = "/delete_photo/<%= @my_photo.id %>"> Delete </a>
+<a class="btn btn-default btn-lg active" href = "/photos"> Back </a>
+<a class="btn btn-default btn-lg active"  href = "/photos/<%= @my_photo.id %>/edit"> Edit </a>
+<a class="btn btn-default btn-lg active"  href = "/delete_photo/<%= @my_photo.id %>"> Delete </a>
